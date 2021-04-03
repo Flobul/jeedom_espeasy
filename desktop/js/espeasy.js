@@ -82,6 +82,8 @@ $("#butCol").click(function(){
   $("#hidCol").toggle("slow");
   document.getElementById("listCol").classList.toggle('col-lg-12');
   document.getElementById("listCol").classList.toggle('col-lg-10');
+  document.getElementById("listOtherCol").classList.toggle('col-lg-12');
+  document.getElementById("listOtherCol").classList.toggle('col-lg-10'); 
 });
 
 $(".li_eqLogic").on('click', function (event) {
@@ -178,7 +180,7 @@ function addCmdToTable(_cmd) {
     tr += '<span class="cmdAttr" data-l1key="id"></span>';
     tr += '</td>';
     tr += '<td>';
-    tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 140px;" placeholder="{{Nom du capteur}}"></td>';
+    tr += '<input class="cmdAttr form-control input-sm" data-l1key="name" style="width : 180px;" placeholder="{{Nom du capteur}}"></td>';
     tr += '<td>';
     tr += '<span class="type" type="' + init(_cmd.type) + '">' + jeedom.cmd.availableType() + '</span>';
     tr += '<span class="subType" subType="' + init(_cmd.subType) + '"></span>';
