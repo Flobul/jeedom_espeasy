@@ -63,8 +63,8 @@ if ($state == 1) {
     <div class="eqLogicThumbnailContainer">
       <?php
       foreach ($eqLogics as $eqLogic) {
-        $opacity = ($eqLogic->getIsEnable()) ? '' : jeedom::getConfiguration('eqLogic:style:noactive');
-        echo '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff ; height : 180px !important;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 180px;margin-left : 10px;' . $opacity . '" >';
+        $opacity = ($eqLogic->getIsEnable()) ? '' : 'disableCard';
+        echo '<div class="eqLogicDisplayCard cursor '.$opacity.'" data-eqLogic_id="' . $eqLogic->getId() . '" style="background-color : #ffffff ; height : 180px !important;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 180px;margin-left : 10px;" >';
 				if ($eqLogic->getConfiguration('icone') != '') {
 					echo '<img src="plugins/espeasy/plugin_info/node_'.$eqLogic->getConfiguration('icone').'.png">';
 				} else echo '<img src="plugins/espeasy/plugin_info/espeasy_icon.png" height="105" width="95" />';
